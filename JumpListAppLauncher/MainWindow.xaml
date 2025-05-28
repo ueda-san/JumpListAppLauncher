@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="JumpListAppLauncher.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JumpListAppLauncher"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="JumpListAppLauncher">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid ActualThemeChanged="Grid_ActualThemeChanged">
+        <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <HyperlinkButton Content="JumpList App Launcher" NavigateUri="https://github.com/ueda-san/JumpListAppLauncher" />
+        </StackPanel>
+        <Frame x:Name="MainFrame"/>
+        <InfoBar x:Name="ErrorBar" IsOpen="False" Title="Error" Severity="Error"/>
+    </Grid>
+</Window>

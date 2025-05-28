@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="JumpListAppLauncher.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JumpListAppLauncher"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <local:ItemTemplateSelector x:Key="ItemTemplateSelector"
+                                    Normal="{StaticResource NormalItemTemplate}"
+                                    Separator="{StaticResource SeparatorItemTemplate}"/>
+
+        <DataTemplate x:Key="NormalItemTemplate" x:DataType="local:ProgramItem">
+            <Grid ColumnDefinitions="Auto, *, Auto, Auto" VerticalAlignment="Center" DoubleTapped="Item_DoubleTapped">
+                <Image Width="32" Height="32" Source="{x:Bind IconImage}"  Grid.Column="0"/>
+                <TextBlock Text="{x:Bind Name}" FontWeight="Bold" Grid.Column="1" Margin="8,0"
+                           Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                <Button x:Uid="Icon_Edit" Click="EditItem_Click" Grid.Column="2"/>
+                <Button x:Uid="Icon_Remove" Click="DeleteItem_Click" Grid.Column="3"/>
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="SeparatorItemTemplate" x:DataType="local:ProgramItem">
+            <Grid ColumnDefinitions="*, Auto" VerticalAlignment="Center" DoubleTapped="Item_DoubleTapped">
+                <Rectangle Height="1" Fill="Silver" HorizontalAlignment="Stretch" Grid.Column="0"/>
+                <Button x:Uid="Icon_Remove" Click="DeleteItem_Click" Grid.Column="1"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" ItemsSource="{x:Bind Programs, Mode=OneWay}"
+                  ItemTemplateSelector = "{StaticResource ItemTemplateSelector}"
+                  CanDragItems="True" CanReorderItems="True"
+                  AllowDrop="True" SelectionMode="Single">
+        </ListView>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" Spacing="4" Margin="2">
+            <Button x:Uid="MainPage_AddItem" Click="AddItem_Click"/>
+            <Button x:Uid="MainPage_AddSeparator" Click="AddSeparator_Click"/>
+            <Button x:Uid="MainPage_Apply" Click="Apply_Click" Style="{StaticResource AccentButtonStyle}"/>
+        </StackPanel>
+        <InfoBar x:Name="FYI" IsOpen="False" x:Uid="Info"
+                 Background="CornflowerBlue" Severity="Informational"/>
+    </Grid>
+</Page>

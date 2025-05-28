@@ -1,0 +1,12 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="400" height="400" fill="none"/>
+  <rect y="0" width="400" height="300" fill="#444"/>
+
+  <!-- Audiowide: https://fonts.google.com/specimen/Audiowide -->
+  <text x="80" y="210" text-anchor="middle" dominant-baseline="middle" font-size="200" font-family="AudioWide"  font-weight="bold" fill="#40ffc0">A</text>
+  <text x="210" y="210" text-anchor="middle" dominant-baseline="middle" font-size="200" font-family="AudioWide"  font-weight="bold" fill="#40ffc0">p</text>
+  <text x="330" y="210" text-anchor="middle" dominant-baseline="middle" font-size="200" font-family="AudioWide"  font-weight="bold" fill="#40ffc0">p</text>
+
+  <text x="200" y="380" text-anchor="middle" dominant-baseline="middle" font-size="72" font-family="AudioWide" font-weight="bold" fill="#606060">Launcher</text>
+</svg>

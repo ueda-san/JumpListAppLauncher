@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity
+    Name="HideoUeda.6164198559D98"
+    Publisher="CN=2A6FEBE9-CBA9-47BB-BFD0-5D5977116D4E"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="f9cb8a92-2ca2-4fb9-a34c-633b5ed9fb83" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>JumpListAppLauncher</DisplayName>
+    <PublisherDisplayName>Hideo Ueda</PublisherDisplayName>
+    <Logo>Assets\AppIcons\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US"/>
+    <Resource Language="ja-JP"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="JumpList AppLauncher"
+        Description="App launcher that can be used from the taskbar jump list"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\AppIcons\MedTile.png"
+        Square44x44Logo="Assets\AppIcons\AppList.png">
+        <uap:DefaultTile  Square71x71Logo="Assets\AppIcons\SmallTile.png" Wide310x150Logo="Assets\AppIcons\WideTile.png" Square310x310Logo="Assets\AppIcons\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
+        <uap:SplashScreen Image="Assets\AppIcons\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="JumpListAppLauncher.AddItemContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JumpListAppLauncher"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" Margin="0,8">
+            <TextBox x:Name="ItemName"
+                     x:Uid="Dialog_DisplayName"
+                     Width="400"
+                     VerticalAlignment="Center"
+                     TextChanged="ItemText_Validate"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,8">
+            <TextBox x:Name="ItemPath"
+                     x:Uid="Dialog_ExecutablePath"
+                     AllowDrop="True" DragOver="ItemPath_DragOver" Drop="ItemPath_Drop"
+                     Width="350"
+                     VerticalAlignment="Center"
+                     TextChanged="ItemText_Validate"/>
+            <Button x:Uid="Icon_FilePicker" Click="FilePicker_Click" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,8">
+            <TextBox x:Name="ItemArgs"
+                     x:Uid="Dialog_Arguments"
+                     Width="400"
+                     VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,8">
+            <TextBox x:Name="ItemDir"
+                     x:Uid="Dialog_WorkingDirectory"
+                     AllowDrop="True" DragOver="ItemDir_DragOver" Drop="ItemDir_Drop"
+                     Width="350"
+                     VerticalAlignment="Center"/>
+            <Button x:Uid="Icon_DirPicker" Click="DirPicker_Click" VerticalAlignment="Bottom"/>
+        </StackPanel>
+    </StackPanel>
+</Page>
