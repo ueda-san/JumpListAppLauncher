@@ -17,6 +17,6 @@ It also supports dark mode and English.
 
 ## Tips
 - The maximum number of taskbar jump lists seems to be 10-15 depending on the OS and screen size.
-More can be displayed by modifying the registry. Please search for “Windows 11: increase jump list” or similar.
+More can be displayed by modifying the registry. Please search for “Windows 11 increase jump list” or similar.
 - Store apps cannot be registered directly, but shortcuts can be created and registered.
 - The program's FilePicker is limited to exe, but if you edit the TextBox or drop a file, you can register pngs, pdfs, etc.
