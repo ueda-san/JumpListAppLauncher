@@ -1,8 +1,9 @@
 # JumpListAppLauncher
 
 タスクバーのジャンプリストを使ったシンプルなランチャーです。  
-(ここにストアへのリンク)
 
+<p align="right">→<a href="README.md">English</a></p>
+<p></p><a href="https://apps.microsoft.com/detail/9mv1lrt0zfq2?referrer=appbadge&mode=direct"><img src="https://get.microsoft.com/images/ja%20dark.svg" width="200"></a></p>
 
 
 タスクバーにピン留めして右クリックメニューから登録したプログラムを起動できます。  
