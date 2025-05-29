@@ -2,7 +2,7 @@
 App launcher that can be used from the taskbar jump list
 
 <p align="right">→<a href="README_ja.md">日本語</a></p>
-<a href="https://apps.microsoft.com/detail/9mv1lrt0zfq2?referrer=appbadge&mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"></a>
+<p></p><a href="https://apps.microsoft.com/detail/9mv1lrt0zfq2?referrer=appbadge&mode=direct"><img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"></a></p>
 
 You can pin the program to the taskbar and launch the registered program from the right-click menu.  
 <img width="170" alt="AppLauncher_JumpList" src="https://github.com/user-attachments/assets/910fcc0e-62ad-4bf8-858c-49f6ca8c2292" /><br/>
