@@ -4,9 +4,9 @@
   <rect y="0" width="400" height="300" fill="#444"/>
 
   <!-- Audiowide: https://fonts.google.com/specimen/Audiowide -->
-  <text x="80" y="210" text-anchor="middle" dominant-baseline="middle" font-size="190" font-family="AudioWide"  font-weight="bold" fill="#40ffc0">D</text>
-  <text x="206" y="210" text-anchor="middle" dominant-baseline="middle" font-size="190" font-family="AudioWide"  font-weight="bold" fill="#40ffc0">e</text>
-  <text x="320" y="210" text-anchor="middle" dominant-baseline="middle" font-size="190" font-family="AudioWide"  font-weight="bold" fill="#40ffc0">v</text>
+  <text x="80" y="210" text-anchor="middle" dominant-baseline="middle" font-size="190" font-family="AudioWide"  font-weight="bold" fill="#40c0ff">D</text>
+  <text x="206" y="210" text-anchor="middle" dominant-baseline="middle" font-size="190" font-family="AudioWide"  font-weight="bold" fill="#40c0ff">e</text>
+  <text x="320" y="210" text-anchor="middle" dominant-baseline="middle" font-size="190" font-family="AudioWide"  font-weight="bold" fill="#40c0ff">v</text>
 
   <text x="200" y="380" text-anchor="middle" dominant-baseline="middle" font-size="72" font-family="AudioWide" font-weight="bold" fill="#606060">Launcher</text>
 </svg>
