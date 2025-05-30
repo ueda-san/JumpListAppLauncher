@@ -45,9 +45,13 @@ namespace JumpListAppLauncher
         }
 
         public bool LaunchProgram(string args) {
-            string[] param = args.Split('|', StringSplitOptions.None);
-            if (param.Length == 3){
-                return LaunchProgram(param[0], param[1], param[2]);
+            var idx1 = args.IndexOf('|');
+            var idx2 = args.LastIndexOf('|');
+            if (idx1 > 0 && idx2 > 0 && idx2 > idx1){
+                string path = args.Substring(0, idx1);
+                string arg = args.Substring(idx1+1, idx2-idx1-1);
+                string dir = args.Substring(idx2+1, args.Length-idx2-1);
+                return LaunchProgram(path, arg, dir);
             }
             UnminimizeAndForeground();
             return false;

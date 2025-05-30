@@ -105,6 +105,7 @@ namespace JumpListAppLauncher
             ContentDialog dialog = (ContentDialog)Parent;
             if (dialog == null) return;
             ItemPath.Text = ItemPath.Text.Trim('"');
+            ItemDir.Text = ItemDir.Text.Trim('"');
 
             if (string.IsNullOrWhiteSpace(ItemName.Text)||
                 string.IsNullOrWhiteSpace(ItemPath.Text)||

@@ -36,7 +36,8 @@
                      x:Uid="Dialog_WorkingDirectory"
                      AllowDrop="True" DragOver="ItemDir_DragOver" Drop="ItemDir_Drop"
                      Width="350"
-                     VerticalAlignment="Center"/>
+                     VerticalAlignment="Center"
+                     TextChanged="ItemText_Validate"/>
             <Button x:Uid="Icon_DirPicker" Click="DirPicker_Click" VerticalAlignment="Bottom"/>
         </StackPanel>
     </StackPanel>
