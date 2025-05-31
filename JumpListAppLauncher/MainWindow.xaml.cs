@@ -50,7 +50,7 @@ namespace JumpListAppLauncher
             if (idx1 > 0 && idx2 > 0 && idx2 > idx1){
                 string path = args.Substring(0, idx1);
                 string arg = args.Substring(idx1+1, idx2-idx1-1);
-                string dir = args.Substring(idx2+1, args.Length-idx2-1);
+                string dir = args.Substring(idx2+1);
                 return LaunchProgram(path, arg, dir);
             }
             UnminimizeAndForeground();
